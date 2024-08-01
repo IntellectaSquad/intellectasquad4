@@ -1,17 +1,18 @@
-Smart irrigation system
+**Smart irrigation system**
 
  The Smart Irrigation System leverages IoT technology to provide continuous monitoring of soil moisture, temperature, and humidity. The  aim of the Smart Irrigation System project is to develop a real-time monitoring of soil moisture, temperature, and humidity. Ultimately, the goal is to promote sustainable farming practices and conserve water resources while maximizing crop yield.
 
-Abstract
+**Abstract**
 
 The Smart Irrigation System is an advanced iot based project which continuously monitors soil moisture, temperature, and humidity using sensors.Integrated with a GSM module, the system sends real-time data and alerts via SMS directly to farmers, enabling remote monitoring and timely action.
-Area of utility
+
+**Area of utility**
 
 * Enhance plant growth and health by ensuring appropriate watering schedules based on environmental conditions. 
 * Continuously monitor soil moisture, temperature, and humidity levels with integrated sensors.
 * Make the system cost-effective and accessible to small-scale farmers and gardeners.
 
-Hardware components
+  **Hardware Component**
 
 1.Arduino uno
 ![image](https://github.com/user-attachments/assets/f78d7769-4660-47d4-8be6-f663142ccbc0)
@@ -29,7 +30,7 @@ Hardware components
    ![image](https://github.com/user-attachments/assets/da070b6a-8df3-4095-8c34-a696c94b7ba9)
 
 
-Connections:
+**Connections:**
 
 1. LCD Display:
     - VCC to Arduino's 5V pin
@@ -47,6 +48,11 @@ Connections:
 4. Arduino Board:
     - Connect the LCD display, DHT11 sensor, and soil moisture sensor to the corresponding pins on the Arduino board.
 
-  Applications 
+**Project Connections**
+
+![image](https://github.com/user-attachments/assets/ee569e60-381b-41fa-a9d7-c2a431b41f1f)
+
+
+  **Applications** 
 
 This project "Smart irrigation system" monitors soil conditions in real-time to prevent crop failure during dry spells.It Allows farmers to monitor and manage irrigation systems from after through SMS alerts, improving response times to changing conditions. It Utilize real-time soil moisture, temperature, and humidity data to optimize irrigation schedules, reducing water usage and enhancing crop yield.
