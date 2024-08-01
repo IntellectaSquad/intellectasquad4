@@ -1,0 +1,54 @@
+#include <LiquidCrystal_I2C.h>
+#include <dht11.h>
+
+// Define pins
+const int soilMoisturePin = A0;
+const int dht11Pin = 7;
+
+// Initialize LCD and DHT11 objects
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+dht11 dht11;
+
+void setup() {
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(0, 0);
+  lcd.print("INTELLECTA SQUAD");
+  lcd.setCursor(0, 1);
+  lcd.print("SMART IRRIGATION");
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+  int soilMoisture = analogRead(soilMoisturePin);
+  dht11.read(dht11Pin);
+  float temperature = round(dht11.temperature * 100.0) / 100.0;
+  float humidity = round(dht11.humidity * 100.0) / 100.0;
+
+  // Display temperature on first screen
+  lcd.setCursor(0, 0);
+  lcd.print("Temperature:");
+  lcd.setCursor(0, 1);
+  lcd.print(temperature);
+  lcd.print("C");
+  delay(2000);
+  lcd.clear();
+
+  // Display humidity on second screen
+  lcd.setCursor(0, 0);
+  lcd.print("Humidity:");
+  lcd.setCursor(0, 1);
+  lcd.print(humidity);
+  lcd.print("%");
+  delay(2000);
+  lcd.clear();
+
+  // Display soil moisture
+  lcd.setCursor(0, 0);
+  lcd.print("Soil Moisture: ");
+  lcd.setCursor(0,1);
+  lcd.print(soilMoisture);
+  delay(2000);
+  lcd.clear();
+}
